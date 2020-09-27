@@ -9,8 +9,16 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VStack{
+            NavigationView{
+                List{
+                    NavigationLink(destination:      URLImage(url:Constans.imageurl)){
+                        Text("Random Anime Face")
+                    }
+                    
+                }
+            }
+        }
     }
 }
 
