@@ -23,7 +23,7 @@ func get_request_link(parms:[String]) ->String {
 func setup_url_parms() -> [String]{
     var urls = [String]()
     
-    for _ in 0..<33{
+    for _ in 0..<34{
         urls.append("0")
     }
     
@@ -31,16 +31,24 @@ func setup_url_parms() -> [String]{
 }
 struct ContentView: View {
     @State private var url_parms = setup_url_parms()
-    private var num_of_sliders = 33
+    private var num_of_sliders = 34
     
     
     var body: some View {
         NavigationView{
-            VStack{
-            Text("Welcome To Face Creator")
-            
-                Text(get_request_link(parms: self.url_parms))
+            ScrollView{
+                VStack{
+                    Text("Welcome To Face Creator")
+                    
+                    ForEach(0..<self.num_of_sliders/2){num in
+                        HStack{
+                            Text("Hello World")
+                            Text("Hello World")
+                        }
+                    }
+                }
             }
+            .navigationTitle("Face Creator")
         }
     }
 }
