@@ -13,9 +13,6 @@
 		E51A5578252133910076EC3E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E51A5577252133910076EC3E /* Preview Assets.xcassets */; };
 		E51A5583252133920076EC3E /* FaceCreatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51A5582252133920076EC3E /* FaceCreatorTests.swift */; };
 		E51A558E252133920076EC3E /* FaceCreatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51A558D252133920076EC3E /* FaceCreatorUITests.swift */; };
-		E51A55AA252134A60076EC3E /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51A55A9252134A60076EC3E /* ImageDownloader.swift */; };
-		E51A55AF252134CC0076EC3E /* URLImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51A55AE252134CC0076EC3E /* URLImage.swift */; };
-		E5392339252138660005863D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5392338252138660005863D /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,9 +45,6 @@
 		E51A5589252133920076EC3E /* FaceCreatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FaceCreatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E51A558D252133920076EC3E /* FaceCreatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceCreatorUITests.swift; sourceTree = "<group>"; };
 		E51A558F252133920076EC3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E51A55A9252134A60076EC3E /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
-		E51A55AE252134CC0076EC3E /* URLImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLImage.swift; sourceTree = "<group>"; };
-		E5392338252138660005863D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,9 +76,6 @@
 			isa = PBXGroup;
 			children = (
 				E51A556F2521338C0076EC3E /* FaceCreator */,
-				E51A55A9252134A60076EC3E /* ImageDownloader.swift */,
-				E51A55AE252134CC0076EC3E /* URLImage.swift */,
-				E5392338252138660005863D /* Constants.swift */,
 				E51A5581252133920076EC3E /* FaceCreatorTests */,
 				E51A558C252133920076EC3E /* FaceCreatorUITests */,
 				E51A556E2521338C0076EC3E /* Products */,
@@ -268,11 +259,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E5392339252138660005863D /* Constants.swift in Sources */,
 				E51A55732521338C0076EC3E /* ContentView.swift in Sources */,
-				E51A55AA252134A60076EC3E /* ImageDownloader.swift in Sources */,
 				E51A55712521338C0076EC3E /* FaceCreatorApp.swift in Sources */,
-				E51A55AF252134CC0076EC3E /* URLImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

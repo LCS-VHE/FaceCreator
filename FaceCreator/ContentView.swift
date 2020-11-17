@@ -7,17 +7,22 @@
 
 import SwiftUI
 
+func get_request_link(parms:[String]) ->String{
+    var domain_gateway = "http://127.0.0.1:5000/show_img"
+    
+    return "http://127.0.0.1:5000/show_img"
+}
+
 struct ContentView: View {
+    @State private var url_parms = [String]()
+    
+    
     var body: some View {
-        VStack{
-            NavigationView{
-                List{
-                    NavigationLink(destination:      URLImage(url:Constans.imageurl)){
-                        Text("Random Anime Face")
-                    }
-                    
-                }
-            }
+        NavigationView{
+            Text("Welcome To Face Creator")
+            
+            
+            .navigationBarTitle("Face Crator")
         }
     }
 }
