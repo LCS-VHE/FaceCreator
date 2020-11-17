@@ -7,22 +7,24 @@
 
 import SwiftUI
 
-func get_request_link(parms:[String]) ->String{
+func get_request_link(parms:[String]) ->String {
     var domain_gateway = "http://127.0.0.1:5000/show_img"
+    var url = domain_gateway
     
-    return "http://127.0.0.1:5000/show_img"
+    return "Hello Is This Working"
 }
 
 struct ContentView: View {
-    @State private var url_parms = [String]()
+    @State private var url_parms = ["String"]
+    private var num_of_sliders = 33
     
     
     var body: some View {
         NavigationView{
-            Text("Welcome To Face Creator")
-            
-            
-            .navigationBarTitle("Face Crator")
+            VStack{
+                Text("Welcome To Face Creator")
+                Text(get_request_link(parms: self.url_parms))
+            }
         }
     }
 }
