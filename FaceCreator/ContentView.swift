@@ -6,9 +6,10 @@
 //
 
 import SwiftUI
+import SDWebImageSwiftUI
 
-func get_request_link(parms:[String]) ->String {
-    var url = "http://127.0.0.1:5000/show_img?"
+func get_request_link(parms:[Double]) ->String {
+    var url = "https://2ec8b5fe8c10.ngrok.io/show_img?"
     
     for i in 0..<33{
         if i != 32{
@@ -33,7 +34,7 @@ struct ContentView: View {
     @State private var url_parms = setup_url_parms()
 //    @State private var num_of_sliders = 34
     @State private var num_of_sliders:Double = 0
-
+    @State private var request_url = get_request_link(parms: setup_url_parms())
     
     
     var body: some View {
@@ -42,6 +43,11 @@ struct ContentView: View {
                 VStack{
                     Text("Welcome To Face Creator")
                     
+                    WebImage(url:URL(string:self.request_url)).resizable().frame(width:350, height:350)
+                    
+                    Button("Show Image"){
+                        self.request_url = get_request_link(parms: self.url_parms)
+                    }
                     ForEach(0..<34/2){num in
                         HStack{
                             Slider(value: $url_parms[num * 2], in: -10...10 )
@@ -49,6 +55,7 @@ struct ContentView: View {
 
                         }
                     }
+                    Text(self.request_url)
                 }
             }
             .navigationTitle("Face Creator")
