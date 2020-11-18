@@ -20,18 +20,20 @@ func get_request_link(parms:[String]) ->String {
     return url
 }
 
-func setup_url_parms() -> [String]{
-    var urls = [String]()
+func setup_url_parms() -> [Double]{
+    var urls = [Double]()
     
     for _ in 0..<34{
-        urls.append("0")
+        urls.append(0)
     }
     
     return urls
 }
 struct ContentView: View {
     @State private var url_parms = setup_url_parms()
-    private var num_of_sliders = 34
+//    @State private var num_of_sliders = 34
+    @State private var num_of_sliders:Double = 0
+
     
     
     var body: some View {
@@ -40,10 +42,11 @@ struct ContentView: View {
                 VStack{
                     Text("Welcome To Face Creator")
                     
-                    ForEach(0..<self.num_of_sliders/2){num in
+                    ForEach(0..<34/2){num in
                         HStack{
-                            Text("Hello World")
-                            Text("Hello World")
+                            Slider(value: $url_parms[num * 2], in: -10...10 )
+                            Slider(value: $url_parms[num * 2 + 1], in: -10...10 )
+
                         }
                     }
                 }
