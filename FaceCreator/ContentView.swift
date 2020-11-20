@@ -9,7 +9,7 @@ import SwiftUI
 import SDWebImageSwiftUI
 
 func get_request_link(parms:[Double]) ->String {
-    var url = "https://2ec8b5fe8c10.ngrok.io/show_img?"
+    var url = "https://7f0bd4ac81ce.ngrok.io/show_img?"
     
     for i in 0..<33{
         if i != 32{
@@ -55,8 +55,7 @@ struct ContentView: View {
 
                         }
                     }
-                    Text(self.request_url)
-                }
+                }
             }
             .navigationTitle("Face Creator")
         }

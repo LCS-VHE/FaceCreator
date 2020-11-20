@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,7 @@
 		E51A5578252133910076EC3E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E51A5577252133910076EC3E /* Preview Assets.xcassets */; };
 		E51A5583252133920076EC3E /* FaceCreatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51A5582252133920076EC3E /* FaceCreatorTests.swift */; };
 		E51A558E252133920076EC3E /* FaceCreatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51A558D252133920076EC3E /* FaceCreatorUITests.swift */; };
+		E58AF5E92564AD9000604657 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = E58AF5E82564AD9000604657 /* SDWebImageSwiftUI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E58AF5E92564AD9000604657 /* SDWebImageSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,6 +148,9 @@
 			dependencies = (
 			);
 			name = FaceCreator;
+			packageProductDependencies = (
+				E58AF5E82564AD9000604657 /* SDWebImageSwiftUI */,
+			);
 			productName = FaceCreator;
 			productReference = E51A556D2521338C0076EC3E /* FaceCreator.app */;
 			productType = "com.apple.product-type.application";
@@ -217,6 +222,9 @@
 				Base,
 			);
 			mainGroup = E51A55642521338C0076EC3E;
+			packageReferences = (
+				E58AF5E72564AD9000604657 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+			);
 			productRefGroup = E51A556E2521338C0076EC3E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -580,6 +588,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E58AF5E72564AD9000604657 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E58AF5E82564AD9000604657 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E58AF5E72564AD9000604657 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E51A55652521338C0076EC3E /* Project object */;
 }
