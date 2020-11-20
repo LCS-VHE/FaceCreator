@@ -32,7 +32,7 @@ func setup_url_parms() -> [Double]{
 }
 struct ContentView: View {
     @State private var url_parms = setup_url_parms()
-//    @State private var num_of_sliders = 34
+    //    @State private var num_of_sliders = 34
     @State private var num_of_sliders:Double = 0
     @State private var request_url = get_request_link(parms: setup_url_parms())
     
@@ -52,10 +52,10 @@ struct ContentView: View {
                         HStack{
                             Slider(value: $url_parms[num * 2], in: -10...10 )
                             Slider(value: $url_parms[num * 2 + 1], in: -10...10 )
-
+                            
                         }
                     }
-                }
+                }
             }
             .navigationTitle("Face Creator")
         }
