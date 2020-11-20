@@ -32,7 +32,7 @@ func setup_url_parms() -> [Double]{
 }
 struct ContentView: View {
     @State private var url_parms = setup_url_parms()
-    //    @State private var num_of_sliders = 34
+    //    @State private var num_of_sliders = 34
     @State private var num_of_sliders:Double = 0
     @State private var request_url = get_request_link(parms: setup_url_parms())
     
@@ -42,6 +42,7 @@ struct ContentView: View {
             ScrollView{
                 VStack{
                     Text("Welcome To Face Creator")
+                    Text("Pro Tip Double Tap can show Image as Well")
                     
                     WebImage(url:URL(string:self.request_url)).resizable().frame(width:350, height:350)
                     
@@ -55,11 +56,14 @@ struct ContentView: View {
                             
                         }
                     }
+                    
+                }.onTapGesture(count: 2) {
+                    self.request_url = get_request_link(parms: self.url_parms)
                 }
-            }
-            .navigationTitle("Face Creator")
         }
+        .navigationTitle("Face Creator")
     }
+}
 }
 
 struct ContentView_Previews: PreviewProvider {
